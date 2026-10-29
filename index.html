@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Computer Science and Engineering</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f9; color: #222; }
+    header { background: #1f3c88; color: white; padding: 15px 30px; }
+    header img { float: left; margin-right: 15px; }
+    header h1 { margin: 5px 0; font-size: 26px; }
+    header p { margin: 0; }
+    nav { background: #142a63; padding: 10px 30px; }
+    nav a { color: white; margin-right: 20px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    main { padding: 10px 30px; }
+    section { background: white; padding: 10px 20px; margin: 15px 0; border-left: 5px solid #1f3c88; }
+    h2 { color: #1f3c88; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    th { background: #1f3c88; color: white; }
+    form label { display: inline-block; width: 140px; }
+    form input, form select { margin: 5px 0; padding: 4px; width: 220px; }
+    footer { background: #142a63; color: white; text-align: center; padding: 12px; }
+    footer a { color: #ffd166; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="CSE Department Logo" width="70" height="70">
+    <h1>Department of Computer Science and Engineering</h1>
+    <p>College of Engineering &mdash; Established 2001</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About the Department</h2>
+      <p>The Department of <strong>Computer Science and Engineering</strong> was started in 2001 with an intake of 60 students.
+        Today it is one of the <em>largest departments</em> of the college, offering undergraduate and postgraduate programmes.</p>
+      <p>Our mission is to produce engineers who can <mark>solve real-world problems</mark> using computing.
+        The department has a strong record in university results and campus placements.</p>
+    </section>
+
+    <section id="programmes">
+      <h2>Academic Programmes</h2>
+      <p>The department offers <b>B.Tech in Computer Science and Engineering</b> (4 years) and <b>M.Tech in Data Science</b> (2 years).</p>
+      <h3>Core Subjects Offered</h3>
+      <ol>
+        <li>Data Structures and Algorithms</li>
+        <li>Database Management Systems</li>
+        <li>Operating Systems</li>
+        <li>Computer Networks</li>
+        <li>Web Programming</li>
+        <li>Machine Learning</li>
+      </ol>
+    </section>
+
+    <section id="faculty">
+      <h2>Faculty Members</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Area of Specialization</th>
+        </tr>
+        <tr><td>Dr. Suresh Kumar</td><td>Professor &amp; HOD</td><td>Artificial Intelligence</td></tr>
+        <tr><td>Dr. Anitha Menon</td><td>Associate Professor</td><td>Computer Networks</td></tr>
+        <tr><td>Mr. Rahul Nair</td><td>Assistant Professor</td><td>Web Technologies</td></tr>
+        <tr><td>Ms. Divya Thomas</td><td>Assistant Professor</td><td>Database Systems</td></tr>
+        <tr><td>Mr. Arun Varghese</td><td>Assistant Professor</td><td>Cyber Security</td></tr>
+      </table>
+    </section>
+
+    <section id="facilities">
+      <h2>Facilities</h2>
+      <ul>
+        <li>Three computer labs with 180 systems</li>
+        <li>Department library with 2000+ books</li>
+        <li>High-speed Wi-Fi campus</li>
+        <li>Seminar hall with projector</li>
+      </ul>
+    </section>
+
+    <section id="enquiry">
+      <h2>Student Enquiry Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br>
+        <label for="course">Course Preference:</label>
+        <select id="course" name="course">
+          <option>B.Tech CSE</option>
+          <option>M.Tech Data Science</option>
+        </select><br>
+        <input type="submit" value="Submit Enquiry" style="width:auto">
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Head of Department, Dept. of CSE<br>
+        Phone: 0471-2345678<br>
+        Email: <a href="mailto:cse@example.edu">cse@example.edu</a></p>
+      <p>Useful links:
+        <a href="https://www.example.edu" target="_blank">College Website</a> |
+        <a href="https://ktu.edu.in" target="_blank">KTU</a> |
+        <a href="https://nptel.ac.in" target="_blank">NPTEL</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Department of CSE. Designed by Abhinav Krishna P. | <a href="#about">Back to top</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Programming Report - Abhinav Krishna P</title>
+<style>
+  @page { size: A4; margin: 18mm 18mm 16mm; }
+  body { font-family: Cambria, "Times New Roman", serif; font-size: 11pt; line-height: 1.4; color: #111; margin: 0; }
+  .title-page { height: 255mm; border: 3px double #1f3c88; padding: 20mm 15mm; box-sizing: border-box; text-align: center; page-break-after: always; }
+  .title-page .uni { font-size: 13pt; letter-spacing: 2px; color: #1f3c88; margin-top: 10mm; }
+  .title-page h1 { font-size: 26pt; color: #1f3c88; margin: 30mm 0 6mm; }
+  .title-page h2 { font-size: 15pt; font-weight: normal; font-style: italic; margin: 0 0 35mm; }
+  .title-page table { margin: 0 auto; font-size: 13pt; border-collapse: collapse; }
+  .title-page td { padding: 6px 14px; text-align: left; }
+  .title-page td:first-child { font-weight: bold; }
+  h2.sec { color: #1f3c88; font-size: 14pt; border-bottom: 1px solid #1f3c88; margin: 14px 0 6px; padding-bottom: 2px; }
+  p { margin: 5px 0; text-align: justify; }
+  ul.tight { margin: 4px 0; padding-left: 22px; }
+  ul.tight li { margin: 1px 0; }
+  pre { background: #f2f2f2; border: 1px solid #ccc; padding: 6px 10px; font-family: Consolas, monospace; font-size: 8.6pt; line-height: 1.3; margin: 6px 0; white-space: pre-wrap; page-break-inside: avoid; }
+  pre .tg { color: #1f3c88; font-weight: bold; }
+  pre .av { color: #a31515; }
+  figure { margin: 6px 0; text-align: center; page-break-inside: avoid; }
+  figure img { border: 1px solid #999; }
+  figcaption { font-size: 9pt; font-style: italic; color: #444; }
+  .row { display: flex; gap: 12px; align-items: flex-start; }
+  .row > * { flex: 1; }
+  .row > figure { flex: 1.3; }
+  code { font-family: Consolas, monospace; font-size: 9.5pt; color: #1f3c88; }
+  table.sem { border-collapse: collapse; width: 100%; font-size: 10pt; page-break-inside: avoid; }
+  table.sem th, table.sem td { border: 1px solid #888; padding: 3px 6px; }
+  table.sem th { background: #dfe6f5; }
+  .refs li { font-size: 10pt; }
+</style>
+</head>
+<body>
+
+<div class="title-page">
+  <h1>Designing a College Department Website using HTML</h1>
+  <h2>Web Programming &mdash; Assignment Report</h2>
+  <table>
+    <tr><td>Name</td><td>: Abhinav Krishna P</td></tr>
+    <tr><td>Roll Number</td><td>: 3</td></tr>
+    <tr><td>Class</td><td>: S7 CSA</td></tr>
+    <tr><td>Subject</td><td>: Web Programming</td></tr>
+    <tr><td>Date</td><td>: 29-10-2026</td></tr>
+  </table>
+</div>
+
+<h2 class="sec">1. Introduction</h2>
+<p>This report explains how a simple multi-section website for the <b>Department of Computer Science and Engineering</b> was created using only HTML (with a small internal style sheet for colours). The page contains six sections &mdash; About, Programmes, Faculty, Facilities, Enquiry and Contact &mdash; which are reached through a navigation bar at the top. The page was written in VS Code and tested in Google Chrome.</p>
+
+<h2 class="sec">2. HTML Document Structure</h2>
+<p>Every HTML page follows a fixed skeleton. The skeleton used for the department page is shown below.</p>
+<div class="row">
+<script type="text/plain" class="code">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Department of Computer Science and Engineering</title>
+</head>
+<body>
+  ... visible content of the page ...
+</body>
+</html>
+</script>
+<ul class="tight">
+  <li><code>&lt;!DOCTYPE html&gt;</code> &ndash; tells the browser that the document uses HTML5, so it renders in standards mode.</li>
+  <li><code>&lt;html&gt;</code> &ndash; the root element that encloses the whole page; <code>lang="en"</code> sets the language.</li>
+  <li><code>&lt;head&gt;</code> &ndash; holds information about the page (charset, title, styles) which is not shown in the body.</li>
+  <li><code>&lt;title&gt;</code> &ndash; text shown on the browser tab and used by search engines and bookmarks.</li>
+  <li><code>&lt;body&gt;</code> &ndash; contains everything the user actually sees: headings, text, images, tables and forms.</li>
+</ul>
+</div>
+
+<h2 class="sec">3. Headings, Paragraphs and Text Formatting</h2>
+<p>HTML provides six heading levels, <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code>. The department name is an <code>&lt;h1&gt;</code>, each section title is an <code>&lt;h2&gt;</code> and sub-titles are <code>&lt;h3&gt;</code>. Text is written inside <code>&lt;p&gt;</code> paragraphs. Formatting tags used are <code>&lt;strong&gt;</code>/<code>&lt;b&gt;</code> (bold), <code>&lt;em&gt;</code> (italic emphasis), <code>&lt;mark&gt;</code> (highlight) and <code>&lt;br&gt;</code> (line break).</p>
+<script type="text/plain" class="code">
+<h2>About the Department</h2>
+<p>The Department of <strong>Computer Science and Engineering</strong> was started in 2001 ...
+   Today it is one of the <em>largest departments</em> of the college ...</p>
+<p>Our mission is to produce engineers who can <mark>solve real-world problems</mark> using computing.</p>
+</script>
+<figure>
+  <img src="screenshots/home.png" width="78%" alt="Home page">
+  <figcaption>Figure 1: Header, navigation bar and the About section (headings, paragraphs, bold, italic and highlight)</figcaption>
+</figure>
+
+<h2 class="sec">4. Lists</h2>
+<p>Lists group related items. An <b>ordered list</b> <code>&lt;ol&gt;</code> numbers its items automatically, while an <b>unordered list</b> <code>&lt;ul&gt;</code> uses bullets. Each item is written inside <code>&lt;li&gt;</code>. The subjects are shown as an ordered list and the facilities as an unordered list.</p>
+<div class="row">
+<script type="text/plain" class="code">
+<h3>Core Subjects Offered</h3>
+<ol>
+  <li>Data Structures and Algorithms</li>
+  <li>Database Management Systems</li>
+  <li>Operating Systems</li>
+  <li>Computer Networks</li>
+  <li>Web Programming</li>
+  <li>Machine Learning</li>
+</ol>
+</script>
+<figure style="margin-top:0">
+  <img src="screenshots/programmes.png" width="100%" alt="Programmes section">
+  <figcaption>Figure 2: Ordered list of subjects</figcaption>
+</figure>
+</div>
+
+<h2 class="sec">5. Hyperlinks</h2>
+<p>The anchor tag <code>&lt;a&gt;</code> creates links. The <code>href</code> attribute gives the destination. Three kinds of links are used: <b>internal links</b> (<code>href="#faculty"</code>) in the navigation bar that jump to a section with that <code>id</code>, <b>external links</b> to the college website and other sites (opened in a new tab with <code>target="_blank"</code>), and an <b>e-mail link</b> using <code>mailto:</code>.</p>
+<script type="text/plain" class="code">
+<nav>
+  <a href="#about">About</a>  <a href="#faculty">Faculty</a>  <a href="#enquiry">Enquiry</a> ...
+</nav>
+<a href="https://www.example.edu" target="_blank">College Website</a> |
+<a href="https://ktu.edu.in" target="_blank">KTU</a> |
+<a href="https://nptel.ac.in" target="_blank">NPTEL</a>
+Email: <a href="mailto:cse@example.edu">cse@example.edu</a>
+</script>
+<figure>
+  <img src="screenshots/contact.png" width="60%" alt="Contact section">
+  <figcaption>Figure 3: Contact section with e-mail and external links</figcaption>
+</figure>
+
+<h2 class="sec">6. Images</h2>
+<p>Images are inserted with the empty tag <code>&lt;img&gt;</code>. The <code>src</code> attribute gives the path of the image file, <code>alt</code> gives alternate text that is read by screen readers and shown if the image fails to load, and <code>width</code>/<code>height</code> set its size in pixels. The department logo (<code>images/logo.svg</code>) is placed in the header, as seen in Figure 1.</p>
+<script type="text/plain" class="code">
+<img src="images/logo.svg" alt="CSE Department Logo" width="70" height="70">
+</script>
+
+<h2 class="sec">7. Tables</h2>
+<p>A table is created with <code>&lt;table&gt;</code>. Each row is a <code>&lt;tr&gt;</code>; header cells use <code>&lt;th&gt;</code> (bold and centred by default) and data cells use <code>&lt;td&gt;</code>. Borders were added using CSS <code>border</code> and <code>border-collapse</code>.</p>
+<script type="text/plain" class="code">
+<table>
+  <tr> <th>Name</th> <th>Designation</th> <th>Area of Specialization</th> </tr>
+  <tr> <td>Dr. Suresh Kumar</td> <td>Professor &amp; HOD</td> <td>Artificial Intelligence</td> </tr>
+  <tr> <td>Dr. Anitha Menon</td> <td>Associate Professor</td> <td>Computer Networks</td> </tr>
+  ... three more rows ...
+</table>
+</script>
+<figure>
+  <img src="screenshots/faculty.png" width="82%" alt="Faculty table">
+  <figcaption>Figure 4: Faculty table with five members</figcaption>
+</figure>
+
+<h2 class="sec">8. Forms</h2>
+<p>Forms collect input from the user. The <code>&lt;form&gt;</code> tag has an <code>action</code> (where data is sent) and a <code>method</code> (get/post). <code>&lt;label&gt;</code> describes each field and is linked to it by the <code>for</code> attribute. Different <code>type</code> values give built-in validation: <code>text</code>, <code>email</code> (checks for @) and <code>tel</code>. A drop-down list is made with <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code>, and <code>type="submit"</code> creates the submit button. The <code>required</code> attribute stops the form from being sent when a field is empty.</p>
+<div class="row">
+<script type="text/plain" class="code">
+<form action="#" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"><br>
+  <label for="course">Course Preference:</label>
+  <select id="course" name="course">
+    <option>B.Tech CSE</option>
+    <option>M.Tech Data Science</option>
+  </select><br>
+  <input type="submit" value="Submit Enquiry">
+</form>
+</script>
+<figure style="margin-top:0">
+  <img src="screenshots/enquiry.png" width="100%" alt="Enquiry form">
+  <figcaption>Figure 5: Student enquiry form</figcaption>
+</figure>
+</div>
+
+<h2 class="sec">9. Semantic HTML</h2>
+<p>Semantic elements describe the <i>meaning</i> of their content instead of just its appearance. They make the code easier to read and help search engines and screen readers understand the page. The following were used:</p>
+<table class="sem">
+  <tr><th>Element</th><th>Purpose</th><th>Use in this website</th></tr>
+  <tr><td><code>&lt;header&gt;</code></td><td>Introductory content of a page</td><td>Logo and department name</td></tr>
+  <tr><td><code>&lt;nav&gt;</code></td><td>Block of navigation links</td><td>Links to all six sections</td></tr>
+  <tr><td><code>&lt;main&gt;</code></td><td>Main, unique content (one per page)</td><td>Wraps all the sections</td></tr>
+  <tr><td><code>&lt;section&gt;</code></td><td>Thematic group of content with a heading</td><td>About, Programmes, Faculty, etc.</td></tr>
+  <tr><td><code>&lt;footer&gt;</code></td><td>Closing information of a page</td><td>Copyright and &ldquo;Back to top&rdquo; link</td></tr>
+</table>
+<script type="text/plain" class="code">
+<body>
+  <header> ... </header>
+  <nav> ... </nav>
+  <main>
+    <section id="about"> ... </section>
+    <section id="faculty"> ... </section>
+  </main>
+  <footer> ... </footer>
+</body>
+</script>
+
+<h2 class="sec">10. Conclusion</h2>
+<p>Using basic HTML tags a complete, readable department website was built. Structure tags gave the page its skeleton, semantic tags organised it into meaningful parts, and lists, tables, links, images and forms presented the department&rsquo;s information. The source code has been uploaded to GitHub.</p>
+
+<h2 class="sec">References</h2>
+<ol class="refs">
+  <li>MDN Web Docs &ndash; HTML: HyperText Markup Language, https://developer.mozilla.org/en-US/docs/Web/HTML</li>
+  <li>W3Schools &ndash; HTML Tutorial, https://www.w3schools.com/html/</li>
+  <li>WHATWG &ndash; HTML Living Standard, https://html.spec.whatwg.org/</li>
+  <li>Jon Duckett, <i>HTML and CSS: Design and Build Websites</i>, Wiley, 2011.</li>
+</ol>
+
+<script>
+document.querySelectorAll('script.code').forEach(function (s) {
+  var lines = s.textContent.replace(/^\n/, '').replace(/\s+$/, '').split('\n');
+  var ind = Math.min.apply(null, lines.filter(function (l) { return l.trim(); }).map(function (l) { return l.match(/^ */)[0].length; }));
+  var t = lines.map(function (l) { return l.slice(ind); }).join('\n')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"([^"]*)"/g, '<span class="av">"$1"</span>')
+    .replace(/(&lt;\/?)([a-zA-Z0-9!]+)/g, '$1<span class="tg">$2</span>');
+  var pre = document.createElement('pre');
+  pre.innerHTML = t;
+  s.parentNode.replaceChild(pre, s);
+});
+</script>
+</body>
+</html>
